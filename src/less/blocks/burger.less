@@ -1,0 +1,34 @@
+.burger {
+
+  &__bar {
+    display: block;
+    position: relative;
+    background-color: @color-blue;
+    width: 22px;
+    height: 3px;
+    border-radius: 1px;
+  }
+
+  &__bar + &__bar {
+    margin-top: 4px;
+  }
+}
+
+
+.burger--close {
+
+  .burger__bar:nth-child(1)  {
+    -webkit-transform: rotate(45deg);
+    top: 7px;
+  }
+
+  .burger__bar:nth-child(2)  {
+    opacity: 0;
+  }
+
+  .burger__bar:nth-child(3)  {
+    -webkit-transform: rotate(-45deg);
+    top: -7px;
+  }
+}
+

@@ -1,0 +1,23 @@
+.wrapper {
+  .make-row();
+  margin-bottom: 40px;
+
+  &__column {
+    float: left;
+    width: 25%;
+    position: relative;
+    min-height: 1px;
+    padding-left:  ceil((@grid-gutter-width / 2));
+    padding-right: floor((@grid-gutter-width / 2));
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+
+    &__column {
+      width: 50%;
+      margin-bottom: 20px;
+    }
+  }
+}

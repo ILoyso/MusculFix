@@ -1,0 +1,63 @@
+.search {
+  margin-top: 20px;
+
+  &__form {
+    .clearfix();
+  }
+
+  &__input {
+    float: left;
+    width: 86%;
+    height: 30px;
+    color: @gray;
+    border: 1px solid #e5e5e5;
+    padding-left: 12px;
+    font-style: italic;
+  }
+
+  &__button {
+    position: relative;
+    float: left;
+    width: 14%;
+    height: 30px;
+    padding: 0;
+    border: 0;
+    background-color: @color-blue;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      background-image: url(../img/spritesheet.png);
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background-position: -5px -114px;
+    }
+
+    &:hover {
+      background-color: @color-blue--hover;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .search {
+    margin-top: 13px;
+    margin-bottom: 12px;
+
+    &__form {
+      width: 100%;
+    }
+
+    &__input {
+      max-width: 147px;
+    }
+
+  }
+}

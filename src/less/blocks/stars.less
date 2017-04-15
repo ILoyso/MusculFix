@@ -1,0 +1,36 @@
+.stars {
+  text-align: center;
+
+  &__item {
+    position: relative;
+    display: inline-block;
+    margin-right: 6px;
+    width: 17px;
+    height: 16px;
+    background-image: url(../img/star_gray.png);
+    background-repeat: no-repeat;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 17px;
+      height: 16px;
+      background-repeat: no-repeat;
+    }
+
+    &--gold:after {
+      background-image: url(../img/star_gold.png);
+    }
+
+    &--gold-half:after {
+      background-image: url(../img/star_gold_half.png);
+    }
+  }
+}

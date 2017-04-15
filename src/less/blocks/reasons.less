@@ -1,0 +1,62 @@
+.reasons {
+  padding-top: 30px;
+  padding-bottom: 25px;
+  background-color: @color-blue;
+
+  h2 {
+    color: @color-white;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+    min-height: 46px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background-image: url(../img/spritesheet.png);
+      background-repeat: no-repeat;
+      display: inline-block;
+    }
+    &--one:before {
+      width: 38px;
+      height: 45px;
+      background-position: -71px -51px;
+    }
+    &--two:before {
+      width: 43px;
+      height: 46px;
+      background-position: -119px -58px;
+    }
+    &--three:before {
+      width: 33px;
+      height: 43px;
+      background-position: -126px -5px;
+    }
+  }
+
+  &__text {
+    color: @color-white;
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .reasons {
+
+    h2 {
+      text-align: center;
+    }
+
+    &__item {
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.carousel-brand {
+  position: relative;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 30px;
+  padding-right: 60px;
+  padding-left: 60px;
+
+  &__item {
+    min-height: 100px;
+    position: relative;
+    max-width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-height: 100px;
+    max-width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    outline: none;
+    border: 0 none;
+    border-top: 2px solid #a9a9a9;
+    border-left: 2px solid #a9a9a9;
+
+    &:hover {
+      border-top: 2px solid @gray;
+      border-left: 2px solid @gray;
+    }
+  }
+
+  .slick-prev {
+    transform: rotate(-45deg);
+    top: 0;
+    bottom: 0;
+    left: 5px;
+    margin: auto;
+  }
+
+  .slick-next {
+    transform: rotate(135deg);
+    top: 0;
+    bottom: 0;
+    right: 5px;
+    margin: auto;
+  }
+}
+
+

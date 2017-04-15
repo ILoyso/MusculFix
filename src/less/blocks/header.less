@@ -1,0 +1,38 @@
+.header {
+
+  padding-bottom: 30px;
+
+  &__logo {
+    padding-top: 15px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  &__places {
+    position: relative;
+    padding-top: 15px;
+    padding-left: 60px;
+  }
+  &__contacts {
+    padding-top: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding-bottom: 5px;
+
+    &__logo {
+      padding-top: 5px;
+      max-width: 142px;
+    }
+
+    &__contacts {
+      padding-top: 5px;
+      text-align: right;
+    }
+  }
+
+}

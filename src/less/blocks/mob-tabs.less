@@ -1,0 +1,61 @@
+.mob-tabs {
+  padding: 0;
+  text-align: center;
+
+  &__nav {
+    padding: 0;
+    max-height: 270px;
+    overflow: hidden;
+
+    &--full {
+      max-height: none;
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    padding-top: 15px;
+  }
+
+  &__nav-item {
+    list-style-type: none;
+    padding: 11px 0;
+
+    &:nth-child(odd) {
+      background-color: @gray--lighten;
+    }
+  }
+
+  &__nav-link {
+    color: @color-main;
+
+    &:hover, &:focus {
+      color: @color-main;
+    }
+
+    &:active {
+      color: @color-red;
+    }
+  }
+
+  &__show {
+    color: @color-blue;
+    cursor: pointer;
+  }
+
+  &__close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: 12px;
+    font-size: 40px;
+    line-height: 20px;
+    color: #d0d1e4;
+    cursor: pointer;
+  }
+
+  &--scroll {
+    margin-top: 55px;
+  }
+}

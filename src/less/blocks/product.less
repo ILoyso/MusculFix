@@ -1,0 +1,100 @@
+.product {
+  position: relative;
+  text-align: center;
+
+  &__img {
+    position: relative;
+    min-height: 207px;
+
+    img {
+      max-width: 100%;
+      max-height: 207px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+
+  &__name, &__name:hover, &__name:focus, &__name:active {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    min-height: 32px;
+    font-size: @text-size--large;
+    color: @color-main;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__brand {
+    display: block;
+  }
+
+  &__type {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: @gray-dark;
+
+    &:hover, &:active, &:focus {
+      color: @gray-dark;
+    }
+  }
+
+  &__price-new {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: @text-size--largest;
+    color: @color-main;
+    font-weight: bold;
+    vertical-align: middle;
+  }
+
+  &__price-old {
+    display: inline-block;
+    color: @gray;
+    text-decoration: line-through;
+    font-weight: normal;
+    vertical-align: middle;
+  }
+
+  &__compare, &__one-click {
+    display: block;
+    margin-bottom: 10px;
+    color: @color-blue;
+    cursor: pointer;
+
+    &:hover {
+      color: @color-blue--hover;
+      text-decoration: underline;
+    }
+    &:active {
+      color: @color-red;
+    }
+  }
+
+  &__stars {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .product {
+
+    &__name, &__name:hover, &__name:focus, &__name:active {
+      font-size: @text-size;
+      height: 32px;
+      overflow: hidden;
+    }
+
+    &__img {
+      min-height: 135px;
+
+      img {
+        max-height: 135px;
+      }
+    }
+  }
+}

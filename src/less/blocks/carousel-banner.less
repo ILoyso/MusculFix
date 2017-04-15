@@ -1,0 +1,131 @@
+.carousel-banner {
+  position: relative;
+
+  &__item {
+    max-height: 331px;
+    position: relative;
+    max-width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__img {
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+
+  .slick-arrow {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    width: 41px;
+    height: 41px;
+    background-color: rgba(255, 255, 255, 0.6);
+    outline: none;
+    border: 0 none;
+    border-radius: 3%;
+
+    &:hover {
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.3);
+      color: transparent;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      border-top: 2px solid @color-blue;
+      border-left: 2px solid @color-blue;
+    }
+  }
+
+  .slick-prev {
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto;
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .slick-next {
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+
+    &:after {
+      transform: rotate(135deg);
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 20px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    li {
+      position: relative;
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      margin: 0 8px;
+      padding: 0;
+      cursor: pointer;
+
+      button {
+        border: 0;
+        background-color: @color-white;
+        display: block;
+        height: 7px;
+        width: 7px;
+        outline: none;
+        line-height: 0px;
+        font-size: 0px;
+        color: transparent;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 50%;
+
+        &:hover, &:focus {
+          outline: none;
+          opacity: 1;
+        }
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      &.slick-active button {
+        background-color: @color-blue;
+
+        &:hover, &:focus {
+          outline: none;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,115 @@
+.basket {
+  position: relative;
+  cursor: pointer;
+  padding-top: 20px;
+  .clearfix();
+
+  &.active {
+    position: relative;
+  }
+
+  &--top {
+    &.active {
+      width: 240px;
+      padding-left: 19px;
+      left: -20px;
+      border-right: 1px solid #d6d6d7;
+      border-left: 1px solid #d6d6d7;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(214,214,215,1);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(214,214,215,1);
+      box-shadow: 0px 0px 5px 0px rgba(214,214,215,1);
+    }
+  }
+
+  &--scroll {
+    padding: 10px 30px 4px 30px;
+    &.active {
+      width: auto;
+      background-color: @color-white;
+      padding: 10px 29px 4px 29px;
+      left: 0px;
+      border-right: 1px solid #d6d6d7;
+      border-left: 1px solid #d6d6d7;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(214,214,215,1);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(214,214,215,1);
+      box-shadow: 0px 0px 5px 0px rgba(214,214,215,1);
+    }
+  }
+
+  &--mob {
+    padding: 14px 0px 4px 0px;
+  }
+
+  &--mob-scroll {
+    padding: 14px 0px 4px 0px;
+  }
+
+  &__icon-wrap {
+    float: left;
+    padding-bottom: 17px;
+    width: 20%;
+  }
+
+  &__icon {
+    position: relative;
+    background-image: url(../img/spritesheet.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    // display: block;
+    // margin: auto;
+    width: 34px;
+    height: 30px;
+    background-position: -25px -5px;
+  }
+
+  &__col {
+    position: absolute;
+    right: -8px;
+    top: -6px;
+    width: 23px;
+    height: 23px;
+    padding-top: 3px;
+    background-color: @color-blue;
+    border-radius: 50%;
+    color: #ffffff;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  &__text {
+    width: 80%;
+    padding-left: 16px;
+    float: right;
+  }
+
+  &__main {
+    margin-bottom: 5px;
+    font-size: @text-size--large;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:after {
+      content: "";
+      position: relative;
+      top: -2px;
+      display: inline-block;
+      margin-left: 10px;
+      width: 7px;
+      height: 7px;
+      border-bottom: 3px solid #d0d1e4;
+      border-left: 3px solid #d0d1e4;
+      transform: rotate(-45deg);
+    }
+
+    &.active:after {
+      transform: rotate(135deg);
+    }
+
+  }
+
+  &__price {
+    margin: 0;
+    color: @gray;
+  }
+}

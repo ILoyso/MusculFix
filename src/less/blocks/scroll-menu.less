@@ -1,0 +1,26 @@
+.scroll-menu {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  background-color: @gray--lighten;
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.33);
+  -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.33);
+  box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.33);
+
+  &--active {
+    display: block;
+  }
+
+  &__phone {
+    text-align: center;
+    padding-top: 14px;
+  }
+
+  &__basket {
+    float: right;
+    width: 102px;
+    .clearfix();
+  }
+}

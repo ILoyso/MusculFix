@@ -1,0 +1,39 @@
+{
+  "name": "MusculFix",
+  "version": "1.0.0",
+  "description": "MusculFix",
+  "dependencies": {
+    "browser-sync": "^2.7.3",
+    "del": "^1.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "^3.0.3",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jshint": "^1.11.0",
+    "gulp-less": "^3.3.0",
+    "gulp-less-reporter": "0.0.2",
+    "gulp-minify-css": "^1.1.1",
+    "gulp-processhtml": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-size": "^1.2.1",
+    "gulp-sourcemaps": "^2.5.1",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.4",
+    "gulp-watch": "^4.2.4",
+    "imagemin-pngquant": "^4.1.0",
+    "jshint-stylish": "^2.0.0",
+    "path": "^0.11.14",
+    "rigger": "^0.5.10",
+    "run-sequence": "^1.1.0",
+    "streamqueue": "^0.1.3"
+  },
+  "devDependencies": {},
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

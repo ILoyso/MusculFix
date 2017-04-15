@@ -1,0 +1,81 @@
+.brand-nav {
+
+  &__wrap {
+    padding: 0;
+    max-height: 225px;
+    overflow: hidden;
+
+    &--full {
+      max-height: 100%;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 23px;
+    list-style-type: none;
+    margin-bottom: 7px;
+
+    &:before {
+      position: absolute;
+      text-transform: uppercase;
+      color: #949494;
+      left: 0px;
+    }
+
+    &--a:before {content: "a";}
+    &--b:before {content: "b";}
+    &--c:before {content: "c";}
+    &--d:before {content: "d";}
+    &--e:before {content: "e";}
+    &--f:before {content: "f";}
+    &--g:before {content: "g";}
+    &--h:before {content: "h";}
+    &--i:before {content: "i";}
+    &--j:before {content: "j";}
+    &--k:before {content: "k";}
+    &--l:before {content: "l";}
+    &--m:before {content: "m";}
+    &--n:before {content: "n";}
+    &--o:before {content: "o";}
+    &--p:before {content: "p";}
+    &--q:before {content: "q";}
+    &--r:before {content: "r";}
+    &--s:before {content: "s";}
+    &--t:before {content: "t";}
+    &--u:before {content: "u";}
+    &--v:before {content: "v";}
+    &--w:before {content: "w";}
+    &--x:before {content: "x";}
+    &--y:before {content: "y";}
+    &--z:before {content: "z";}
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: @color-main;
+
+    &:hover, &:focus {
+      color: @color-main;
+    }
+
+    &:active {
+      color: @color-red;
+    }
+  }
+
+  &__show {
+    margin-top: 10px;
+    color: @color-blue;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: @color-blue--hover;
+      text-decoration: underline;
+    }
+    &:active {
+      color: @color-red;
+    }
+  }
+}
