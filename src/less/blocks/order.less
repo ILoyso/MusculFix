@@ -22,11 +22,26 @@
   }
 
   &__remove {
+    position: relative;
     float: right;
     margin-top: 10px;
-    font-size: @text-size--h2;
+    font-size: 30px;
     color: #d0d1e4;
     cursor: pointer;
+
+    &:hover::after {
+      content: 'Удалить из корзины';
+      position: absolute;
+      z-index: 15;
+      top: -24px;
+      width: 130px;
+      padding: 3px 13px;
+      border-radius: 10px;
+      background-color: @color-blue;
+      font-size: @text-size--small;
+      color: @color-white;
+      text-align: center;
+    }
   }
 
   &__name {

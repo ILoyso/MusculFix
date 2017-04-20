@@ -24,6 +24,7 @@
 @import 'blocks/main-menu.less';
 @import 'blocks/main-nav.less';
 @import 'blocks/mob-menu.less';
+@import 'blocks/mob-tabs-nav.less';
 @import 'blocks/mob-tabs.less';
 @import 'blocks/modal-basket.less';
 @import 'blocks/modal-compare.less';
@@ -55,6 +56,10 @@ body {
   color: @color-main;
   font-weight: normal;
   font-style: normal;
+
+  &.mob-menu {
+    overflow-y: hidden;
+  }
 }
 
 a {
@@ -91,7 +96,7 @@ h3 {
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 0px;
-  margin-bottom: 14px;
+  margin-bottom: 11px;
   font-family: inherit;
 }
 

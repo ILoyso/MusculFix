@@ -1,0 +1,30 @@
+.mob-tabs-nav {
+  padding: 0;
+  max-height: 270px;
+  overflow: hidden;
+
+  &--full {
+    max-height: none;
+  }
+
+  &__item {
+    list-style-type: none;
+    padding: 11px 0;
+
+    &:nth-child(odd) {
+      background-color: @gray--lighten;
+    }
+  }
+
+  &__link {
+    color: @color-main;
+
+    &:hover, &:focus {
+      color: @color-main;
+    }
+
+    &:active {
+      color: @color-red;
+    }
+  }
+}

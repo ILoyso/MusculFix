@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  var scrollMenuPos = 150;
+  var scrollMenuPos = 125;
   var scrollMenuMobPos = 52;
   var modalBasket = $('#modalBasket');
 
@@ -85,7 +85,7 @@ $(document).ready(function(){
     modalPlaceClose();
   });
 
-  $('.modal-place').click(function() {
+  $('.modal-place').click(function(evt) {
     modalPlaceClose();
   });
 
@@ -305,11 +305,13 @@ $(document).ready(function(){
   function closeBurgerMenu() {
     $('.left-menu').removeClass('active');
     $('.left-menu__wrap').removeClass('active');
+    $('body').removeClass('mob-menu');
   }
 
   function openBurgerMenu() {
     $('.left-menu').addClass('active');
     $('.left-menu__wrap').addClass('active');
+    $('body').addClass('mob-menu');
   }
 
   $('.burger--open').click(function(){
@@ -329,6 +331,14 @@ $(document).ready(function(){
     }
   });
 
+  // Subscribe Form
+
+  $('#subscribeForm').submit(function(evt) {
+    $('.subscribe__main').hide();
+    $('.subscribe__thank').show();
+    evt.preventDefault();
+  });
+
   $('.carousel-brand').slick({
     infinite: true,
     speed: 300,
@@ -337,9 +347,10 @@ $(document).ready(function(){
   $('.carousel-banner').slick({
     dots: true,
     infinite: true,
-    speed: 300
+    speed: 300,
+    autoplay: true,
+    autoplaySpeed: 10000,
   });
-
   $('.timer').countdown({
     until: new Date(2017, 12 - 9, 30),
     padZeroes: true
@@ -349,7 +360,7 @@ $(document).ready(function(){
 
 
   // For mob
-    function mobResize() {
+  function mobResize() {
    if ($(window).width() <= '767') {
       $('.action').appendTo('#actionMob');
       $('.subscribe').appendTo('#subscribeMob');
@@ -390,14 +401,14 @@ $(document).ready(function(){
 
   // Show all list in tab
   $('.mob-tabs__show').click(function() {
-    if ($('.mob-tabs__nav').hasClass('mob-tabs__nav--full')) {
-      $('.mob-tabs__nav').removeClass('mob-tabs__nav--full');
+    if ($('.mob-tabs-nav').hasClass('mob-tabs-nav--full')) {
+      $('.mob-tabs-nav').removeClass('mob-tabs-nav--full');
       $('html, body').animate({
         scrollTop: ($('#myTab').offset().top)
       }, 500);
       $('.mob-tabs__show').html('Показать весь список');
     } else {
-      $('.mob-tabs__nav').addClass('mob-tabs__nav--full');
+      $('.mob-tabs-nav').addClass('mob-tabs-nav--full');
       $('.mob-tabs__show').html('Скрыть список');
     }
   });

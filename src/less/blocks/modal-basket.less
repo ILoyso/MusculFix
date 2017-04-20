@@ -1,7 +1,7 @@
 .modal-basket {
   display: none;
   position: absolute;
-  z-index: 5;
+  z-index: 15;
   width: 480px;
   background-color: @color-white;
   border: 1px solid #d6d6d7;
@@ -50,6 +50,8 @@
 
 @media (max-width: 767px) {
   .modal-basket {
+    overflow-y: scroll;
+    max-height: 70vh;
 
     &.active {
 

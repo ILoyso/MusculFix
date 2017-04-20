@@ -53,12 +53,24 @@
     }
   }
 
+  &__img-link {
+    display: inline-block;
+  }
+
   &__title {
+    display: block;
     margin-bottom: 8px;
     font-size: @text-size--large;
     font-weight: bold;
     text-transform: uppercase;
     color: @color-white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: @color-white;
+      text-decoration: none;
+    }
   }
 
   &__timer-text {
