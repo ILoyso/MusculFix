@@ -414,4 +414,48 @@ $(document).ready(function(){
   });
 
 
+
+
+  // Form-table
+  var numCount = document.querySelector('.form-table__count');
+  var plusBtn = document.querySelector('.form-table__arrow--plus');
+  var minusBtn = document.querySelector('.form-table__arrow--minus');
+  plusBtn.onclick = function() {
+    var qty = parseInt(numCount.value);
+    qty = qty + 1;
+    numCount.value = qty;
+  }
+  minusBtn.onclick = function() {
+    var qty = parseInt(numCount.value);
+    if (qty <= 1) {
+      return;
+    }
+    qty = qty - 1;
+    numCount.value = qty;
+  }
+
+  function getChar(event) {
+    if (event.which == null) { // IE
+      if (event.keyCode < 32) return null; // спец. символ
+      return String.fromCharCode(event.keyCode)
+    }
+    if (event.which != 0 && event.charCode != 0) { // все кроме IE
+      if (event.which < 32) return null; // спец. символ
+      return String.fromCharCode(event.which); // остальные
+    }
+    return null; // спец. символ
+  }
+
+  numCount.onkeypress = function(e) {
+    e = e || event;
+    if (e.ctrlKey || e.altKey || e.metaKey) return;
+    var chr = getChar(e);
+    if (chr == null) return;
+    if (chr < '0' || chr > '9') {
+      return false;
+    }
+  }
+
+
+
 });

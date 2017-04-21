@@ -1,0 +1,157 @@
+.form-table {
+  border-collapse: collapse;
+  margin-bottom: 40px;
+
+  tr {
+    border-top: 1px solid #d5d5da;
+    border-bottom: 1px solid #d5d5da;
+  }
+
+  th {
+    padding: 16px 0;
+
+    &:nth-child(1) {
+      width: 13.33333333%;
+      padding-left: 40px;
+    }
+    &:nth-child(2) {
+      width: 33.33333333%;
+    }
+    &:nth-child(3) {
+      width: 20%;
+    }
+    &:nth-child(4) {
+      width: 13.33333333%;
+    }
+    &:nth-child(5) {
+      width: 13.33333333%;
+      padding-left: 23px;
+    }
+    &:nth-child(6) {
+      width: 6.66666667%;
+    }
+  }
+
+  td {
+    padding-top: 36px;
+    padding-bottom: 36px;
+
+    &:nth-child(1) {
+      padding-left: 23px;
+    }
+    &:nth-child(2) {
+      padding-top: 55px;
+    }
+    &:nth-child(3) {
+      padding-top: 55px;
+    }
+    &:nth-child(4) {
+      padding-top: 44px;
+    }
+    &:nth-child(5) {
+      padding-top: 55px;
+      padding-left: 23px;
+    }
+    &:nth-child(6) {
+      padding-top: 55px;
+      padding-right: 23px;
+    }
+  }
+
+  &__img {
+    max-height: 100px;
+    max-width: 120px;
+  }
+
+  &__name, &__name:hover, &__name:focus, &__name:active {
+    display: block;
+    margin-bottom: 5px;
+    font-size: @text-size--large;
+    color: @color-main;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__type {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: @gray-dark;
+
+    &:hover, &:focus {
+      color: @gray-dark;
+    }
+
+    &:active {
+      color: @color-blue;
+      text-decoration: none;
+    }
+  }
+
+  &__price-new {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: @text-size--large;
+    color: @color-main;
+    font-weight: bold;
+    vertical-align: middle;
+  }
+
+  &__sum {
+    display: inline-block;
+    font-size: @text-size--large;
+    color: @color-main;
+    font-weight: bold;
+    vertical-align: middle;
+  }
+
+  &__price-old {
+    display: inline-block;
+    color: @gray;
+    text-decoration: line-through;
+    font-weight: normal;
+    vertical-align: middle;
+  }
+
+  &__remove {
+    font-size: 40px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+    color: #d0d1e4;
+  }
+
+  &__count {
+    float: left;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+
+    &:focus {
+      outline: #4d90fe auto 5px;
+    }
+  }
+
+  &__arrow {
+    position: relative;
+    float: left;
+    width: 40px;
+    height: 40px;
+    border: 0 none;
+    background-color: @color-blue;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover,
+    &:focus {
+      background-color: @color-blue--hover;
+    }
+
+    &--minus {
+      background-image: url(../img/arrow_bottom.png);
+    }
+    &--plus {
+      background-image: url(../img/arrow_top.png);
+    }
+  }
+}
