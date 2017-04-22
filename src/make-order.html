@@ -120,7 +120,7 @@
             <li class="main-nav__item"><a href="#" class="main-nav__link">Наши магазины</a></li>
             <li class="main-nav__item"><a href="#" class="main-nav__link">Оплата и доставка</a></li>
             <li class="main-nav__item"><a href="#" class="main-nav__link">Статьи</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Здоровое питание</a></li>
+            <!-- <li class="main-nav__item"><a href="#" class="main-nav__link">Здоровое питание</a></li> -->
             <li class="main-nav__item"><a href="#" class="main-nav__link main-nav__link--action">Акции</a></li>
           </ul>
         </nav>
@@ -391,7 +391,7 @@
   <div class="row">
     <div class="col-xs-15">
       <ol class="breadcrumb">
-        <li><a href="#">Главная</a></li>
+        <li><a href="index.html">Главная</a></li>
         <li><a href="#">Корзина</a></li>
         <li class="active">Оформление заказа</li>
       </ol>
@@ -405,182 +405,173 @@
     <div class="col-xs-15">
       <div class="form-main">
         <h2>Оформление заказа</h2>
-        <table class="form-table" cellpadding="0" cellspacing="0" width="100%">
-          <tr>
-            <th>Фото</th>
-            <th>Наименование</th>
-            <th>Цена</th>
-            <th>Количество</th>
-            <th>Сумма</th>
-            <th>Удалить</th>
-          </tr>
-          <tr class="form-table__row">
-            <td class="form-table__img-wrap">
+        <div class="form-table">
+          <div class="form-table__row form-table__row--header">
+            <div class="form-table__th">Фото</div>
+            <div class="form-table__th">Наименование</div>
+            <div class="form-table__th">Цена</div>
+            <div class="form-table__th">Количество</div>
+            <div class="form-table__th">Сумма</div>
+            <div class="form-table__th">Удалить</div>
+          </div>
+          <div class="form-table__row">
+            <div class="form-table__img-wrap form-table__cell">
               <a href="#">
                 <img class="form-table__img" src="img/test-item.png">
               </a>
-            </td>
-            <td valign="top">
+            </div>
+            <div class="form-table__cell" valign="top">
               <a href="#" class="form-table__name">Whey Protein длинное ваниль</a>
               <a href="#" class="form-table__brand">Scitec Nutrion</a>
               <a href="#" class="form-table__type">BCAA</a>
               <p class="form-table__width">Вес: 500 г.</p>
-            </td valign="top">
-            <td valign="top">
+            </div valign="top">
+            <div class="form-table__cell" valign="top">
               <p class="form-table__price-old">
                 1 550.00 руб
               </p>
               <p class="form-table__price-new">
                 1 340.00 руб
               </p>
-            </td>
-            <td valign="top">
+            </div>
+            <div class="form-table__cell" valign="top">
               <div class="">
                 <input class="form-table__arrow form-table__arrow--minus" type="button">
                 <input class="form-table__count" type="text" value="1">
                 <input class="form-table__arrow form-table__arrow--plus" type="button">
               </div>
-            </td>
-            <td class="form-table__sum-wrap" valign="top">
-              <p class="form-table__sum">2 680.00 руб</p>
-            </td>
-            <td class="form-table__remove-wrap" valign="top">
+            </div>
+            <div class="form-table__sum-wrap form-table__cell" valign="top">
+              <p class="form-table__sum"><span class="form-table__sum--mob">Всего: </span>2 680.00 руб</p>
+            </div>
+            <div class="form-table__remove-wrap form-table__cell" valign="top">
               <div class="form-table__remove">
                 <span>×</span>
               </div>
-            </td>
-          </tr>
-          <tr class="form-table__row">
-            <td class="form-table__img-wrap">
-              <a href="#">
-                <img class="form-table__img" src="img/test-item.png">
-              </a>
-            </td>
-            <td valign="top">
-              <a href="#" class="form-table__name">Whey Protein длинное ваниль</a>
-              <a href="#" class="form-table__brand">Scitec Nutrion</a>
-              <a href="#" class="form-table__type">BCAA</a>
-              <p class="form-table__width">Вес: 500 г.</p>
-            </td valign="top">
-            <td valign="top">
-              <p class="form-table__price-old">
-                1 550.00 руб
-              </p>
-              <p class="form-table__price-new">
-                1 340.00 руб
-              </p>
-            </td>
-            <td valign="top">
-              <div class="">
-                <input class="form-table__arrow form-table__arrow--minus" type="button">
-                <input class="form-table__count" type="text" value="1">
-                <input class="form-table__arrow form-table__arrow--plus" type="button">
-              </div>
-            </td>
-            <td class="form-table__sum-wrap" valign="top">
-              <p class="form-table__sum">2 680.00 руб</p>
-            </td>
-            <td class="form-table__remove-wrap" valign="top">
-              <div class="form-table__remove">
-                <span>×</span>
-              </div>
-            </td>
-          </tr>
-        </table>
-
-        <div class="row">
-          <div class="col-md-5">
-            <div class="form-contact">
-              <h3>Шаг 1. Контактная информация</h3>
-              <input class="form-contact__input" type="text" placeholder="Ваше имя *">
-              <input class="form-contact__input" type="email" placeholder="Ваш email *">
-              <input class="form-contact__input" type="tel" placeholder="Ваш телефон *">
-              <textarea class="form-contact__textarea" name="" id="" cols="30" rows="6" placeholder="Комментарий"></textarea>
             </div>
           </div>
-          <div class="col-md-5 col-md-offset-1">
-            <h3>Шаг 2. тип доставки</h3>
+          <div class="form-table__row">
+            <div class="form-table__img-wrap form-table__cell">
+              <a href="#">
+                <img class="form-table__img" src="img/test-item.png">
+              </a>
+            </div>
+            <div class="form-table__cell" valign="top">
+              <a href="#" class="form-table__name">Whey Protein длинное ваниль</a>
+              <a href="#" class="form-table__brand">Scitec Nutrion</a>
+              <a href="#" class="form-table__type">BCAA</a>
+              <p class="form-table__width">Вес: 500 г.</p>
+            </div valign="top">
+            <div class="form-table__cell" valign="top">
+              <p class="form-table__price-old">
+                1 550.00 руб
+              </p>
+              <p class="form-table__price-new">
+                1 340.00 руб
+              </p>
+            </div>
+            <div class="form-table__cell" valign="top">
+              <div class="">
+                <input class="form-table__arrow form-table__arrow--minus" type="button">
+                <input class="form-table__count" type="text" value="1">
+                <input class="form-table__arrow form-table__arrow--plus" type="button">
+              </div>
+            </div>
+            <div class="form-table__sum-wrap form-table__cell" valign="top">
+              <p class="form-table__sum"><span class="form-table__sum--mob">Всего: </span>2 680.00 руб</p>
+            </div>
+            <div class="form-table__remove-wrap form-table__cell" valign="top">
+              <div class="form-table__remove">
+                <span>×</span>
+              </div>
+            </div>
           </div>
-          <div class="col-md-3 col-md-offset-1">
-            <h3>Шаг 3. Подтверждение</h3>
-
-            <p>Сумма: 4 020.00 руб.</p>
-            <p>Доставка: 200.00 руб.</p>
-            <p>Скидка: 0.00 руб.</p>
-
-            <p>Всего к оплате: 4 220.00 руб.</p>
-
-            <a href="#">У меня есть промокод</a>
-          </div>
-
         </div>
 
+        <div id="formSteps" class="form-steps">
+
+          <section class="form-steps__step active">
+            <h3 class="form-steps__title">Шаг 1. Контактная информация</h3>
+            <div class="form-contact">
+              <input class="form-contact__input" type="text" placeholder="Ваше имя *" required>
+              <input class="form-contact__input" type="email" placeholder="Ваш email *" required>
+              <input class="form-contact__input" type="tel" placeholder="Ваш телефон *" required>
+              <textarea class="form-contact__textarea" name="" id="" cols="30" rows="6" placeholder="Комментарий"></textarea>
+            </div>
+            <span class="form-steps__next">Следующий шаг</span>
+          </section>
+
+          <section class="form-steps__step">
+            <h3 class="form-steps__title">Шаг 2. тип доставки</h3>
+            <div class="form-delivery">
+              <input class="form-delivery__radio" type="radio" name="delivery" id="deliveryByMyself" checked>
+              <label class="form-delivery__block" for="deliveryByMyself">
+                <h3 class="form-delivery__title">Самовывоз</h3>
+                <p class="form-delivery__description">
+                  Оплата: <strong>наличными или банковской картой</strong> <br>
+                  Минимальная сумма заказа: <strong>Нет</strong>
+                </p>
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Адрес магазина
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">Озерки</a></li>
+                    <li><a href="#">Комендантский</a></li>
+                    <li><a href="#">Горьковская</a></li>
+                    <li><a href="#">Владимирвская / Достоевская</a></li>
+                  </ul>
+                </div>
+              </label>
+              <input class="form-delivery__radio" type="radio" name="delivery" id="deliveryByCourier">
+              <label class="form-delivery__block" for="deliveryByCourier">
+                <h3 class="form-delivery__title">Доставка курьером</h3>
+                <p class="form-delivery__description">
+                  Минимальная сумма заказа: <strong>3000 руб. <br>
+                  (+ 200 руб. доставка)</strong> <br>
+                  Бесплатная доставка: <strong>от 7000 руб.</strong> <br>
+                  Оплата: <strong>только наличными</strong> <br>
+                  Период доставки: <strong>с 11 часов ежедневно</strong>
+                </p>
+                <input class="form-delivery__input" type="tel" placeholder="Укажите адрес доставки *" required>
+              </label>
+            </div>
+            <span class="form-steps__prev">Предыдущий шаг</span>
+            <span class="form-steps__next">Следующий шаг</span>
+          </section>
+
+          <section class="form-steps__step">
+            <h3 class="form-steps__title">Шаг 3. Подтверждение</h3>
+            <div class="form-confirm">
+              <div class="form-confirm__price">
+                <p class="form-confirm__text">
+                  Сумма: 1 020.00 руб. <br>
+                  Доставка: 200.00 руб. <br>
+                  Скидка: 0.00 руб.
+                </p>
+              </div>
+              <p class="form-confirm__sum">Всего к оплате: <span class="form-confirm__total-sum">14 220.00 руб.</span></p>
+              <a href="#" class="form-confirm__code" data-toggle="modal" data-target="#modalCode">У меня есть промокод</a>
+              <button id="mainFormSubmit" class="button button--full button--contacts">Оформить заказ</button>
+            </div>
+            <span class="form-steps__prev">Предыдущий шаг</span>
+          </section>
+        </div>
 
       </div>
 
-
-
-
-
+      <div class="ty-text">
+        <h2 class="ty-text__title">Заказ успешно создан!</h2>
+        <p>Администратор свяжется с Вами в ближайшее время для уточнения деталей заказа. <br>
+        Копия заказа отправлена вам на контактный e-mail</p>
+        <a href="#" class="button button--ty">Продолжить покупки</a>
+      </div>
     </div>
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Additional block -->
 <div class="container additional">
   <div class="row">
     <div class="col-xs-15">
@@ -665,7 +656,7 @@
         <a href="#" class="product__type">гейнеры</a>
         <div class="product__price">
           <p class="product__price-old">
-          1 550.00 руб
+            1 550.00 руб
           </p>
           <p class="product__price-new">
             1 340.00 руб
@@ -755,10 +746,6 @@
     </div>
   </div>
 </div>
-
-
-
-
 
 <!-- Bottom Nav  -->
 <div class="bottom-menu">
@@ -881,6 +868,26 @@
               <input class="modal-form__input" type="tel" placeholder="Ваш номер телефона?*" required>
               <input class="modal-form__input" type="email" placeholder="Ваш email">
               <textarea class="modal-form__textarea" placeholder="Текс сообщения" name="" id="" cols="30" rows="10"></textarea>
+              <button class="button button--full button--modal">Купить</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal code-->
+<div class="modal fade" id="modalCode" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+          <div class="modal-form">
+            <h2 class="modal-form__title">Получить скидку</h2>
+            <form action="">
+              <input class="modal-form__input" type="text" placeholder="Введите промокод" required>
               <button class="button button--full button--modal">Купить</button>
             </form>
           </div>
@@ -1117,7 +1124,6 @@
 <script src="js/slick.min.js" type="text/javascript"></script>
 <script src="js/jquery.plugin.min.js" type="text/javascript"></script>
 <script src="js/jquery.countdown.min.js" type="text/javascript"></script>
-<script src="js/jquery.countdown-ru.js" type="text/javascript"></script>
 <script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>

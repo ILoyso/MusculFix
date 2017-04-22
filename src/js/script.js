@@ -456,6 +456,35 @@ $(document).ready(function(){
     }
   }
 
+  // Main form submit
 
+  $('#mainFormSubmit').click(function() {
+    $('.form-main').hide();
+    $('.ty-text').show();
+    $('html, body').animate({
+        scrollTop: (0)
+    }, 100);
+  })
+
+
+
+
+
+
+
+
+
+
+  $('.form-steps__next').click(function() {
+    var step = document.querySelector('.form-steps__step.active');
+    $(step).next().addClass('active');
+    $(step).removeClass('active');
+  });
+
+  $('.form-steps__prev').click(function() {
+    var step = document.querySelector('.form-steps__step.active');
+    $(step).prev().addClass('active');
+    $(step).removeClass('active');
+  });
 
 });

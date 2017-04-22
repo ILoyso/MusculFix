@@ -1,6 +1,7 @@
 @import 'bootstrap/bootstrap.less';
 @import 'fonts.less';
 @import 'variables.less';
+@import 'blocks/type.less';
 @import 'slick.less';
 @import 'jquery.countdown.less';
 
@@ -19,9 +20,12 @@
 @import 'blocks/contacts.less';
 @import 'blocks/discount.less';
 @import 'blocks/footer.less';
+@import 'blocks/form-confirm.less';
 @import 'blocks/form-contact.less';
+@import 'blocks/form-delivery.less';
 @import 'blocks/form-main.less';
 @import 'blocks/form-table.less';
+@import 'blocks/form-steps.less';
 @import 'blocks/header.less';
 @import 'blocks/left-menu.less';
 @import 'blocks/main-content.less';
@@ -46,12 +50,8 @@
 @import 'blocks/social.less';
 @import 'blocks/stars.less';
 @import 'blocks/subscribe.less';
+@import 'blocks/ty-text.less';
 @import 'blocks/wrapper.less';
-
-
-
-
-
 
 body {
   font-size: @text-size;
@@ -65,56 +65,3 @@ body {
     overflow-y: hidden;
   }
 }
-
-a {
-  color: @color-blue;
-
-  &:active {
-    color: @color-red;
-  }
-  &:focus {
-    outline: none;
-  }
-}
-
-h1 {
-  font-size: @text-size--h1;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-family: inherit;
-}
-
-h2 {
-  font-size: @text-size--h2;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-top: 0px;
-  margin-bottom: 25px;
-  font-family: inherit;
-}
-
-h3 {
-  font-size: @text-size--large;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-top: 0px;
-  margin-bottom: 11px;
-  font-family: inherit;
-}
-
-@media (max-width: 767px) {
-  h1 {
-    font-size: @text-size--largest;
-  }
-
-  h2 {
-    font-size: @text-size--largest;
-  }
-
-  h3 {
-    font-size: @text-size--largest;
-  }
-}
-

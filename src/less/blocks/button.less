@@ -15,6 +15,21 @@
     background-color: @color-red;
     touch-action: manipulation;
 
+    &:hover, &:focus {
+        background-color: @color-red--hover;
+        color: @color-white;
+        text-decoration: none;
+        outline: 0;
+    }
+
+    &:active {
+        background-color: @gray--lighten;
+        color: @color-red;
+        font-weight: bold;
+        text-decoration: none;
+        outline: 0;
+    }
+
     &--full {
         width: 100%;
     }
@@ -45,21 +60,22 @@
         margin-top: 18px;
         text-transform: uppercase;
         font-weight: bold;
-        padding: 13px 0;
+        padding-top: 12px;
+        padding-bottom: 14px;
     }
 
-    &:hover, &:focus {
-        background-color: @color-red--hover;
-        color: @color-white;
-        text-decoration: none;
-        outline: 0;
-    }
+    &--ty {
+        background-color: @color-blue;
+        width: 220px;
+        margin-top: 18px;
+        padding: 12px 0;
 
-    &:active {
-        background-color: @gray--lighten;
-        color: @color-red;
-        font-weight: bold;
-        text-decoration: none;
-        outline: 0;
+        &:hover, &:focus {
+           background-color: @color-blue--hover;
+        }
+
+        &:active {
+            color: @color-white;
+        }
     }
 }
