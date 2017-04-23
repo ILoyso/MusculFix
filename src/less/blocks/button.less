@@ -30,6 +30,18 @@
         outline: 0;
     }
 
+    &--blue {
+        background-color: @color-blue;
+
+        &:hover, &:focus {
+           background-color: @color-blue--hover;
+        }
+
+        &:active {
+            color: @color-white;
+        }
+    }
+
     &--full {
         width: 100%;
     }
@@ -64,19 +76,10 @@
         padding-bottom: 14px;
     }
 
-    &--ty {
-        background-color: @color-blue;
+    &--thank-you {
         width: 220px;
         margin-top: 18px;
         padding: 12px 0;
-
-        &:hover, &:focus {
-           background-color: @color-blue--hover;
-        }
-
-        &:active {
-            color: @color-white;
-        }
     }
 }
 

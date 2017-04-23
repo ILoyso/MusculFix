@@ -479,7 +479,7 @@ $(document).ready(function(){
 
   $('#mainFormSubmit').click(function() {
     $('.form-main').hide();
-    $('.ty-text').show();
+    $('.thank-you').show();
     $('html, body').animate({
         scrollTop: (0)
     }, 100);
