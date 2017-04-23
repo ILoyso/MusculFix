@@ -302,6 +302,19 @@ $(document).ready(function(){
     }
   });
 
+  $('.brand-filter__show').click(function() {
+    if ($('.brand-filter').hasClass('brand-filter--full')) {
+      $('.brand-filter').removeClass('brand-filter--full');
+      $('html, body').animate({
+        scrollTop: ($('.brand-filter').offset().top - 100)
+      }, 500);
+      $('.brand-filter__show').html('Показать весь список');
+    } else {
+      $('.brand-filter').addClass('brand-filter--full');
+      $('.brand-filter__show').html('Скрыть список');
+    }
+  });
+
   // Show all category
   $('.product-nav__show').click(function() {
     if ($('.product-nav__wrap').hasClass('product-nav__wrap--short')) {

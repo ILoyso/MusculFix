@@ -1,0 +1,67 @@
+.brand-filter {
+  max-height: 100px;
+  overflow: hidden;
+
+  &--full {
+    max-height: 100%;
+  }
+
+  &__checkbox {
+    display: none;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    font-weight: normal;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 2px;
+      left: 0px;
+      width: 12px;
+      height: 12px;
+      border: 1px solid #d5d5da;
+      background-color: @color-white;
+    }
+
+    &:hover {
+      background-color: @gray--lighten;
+    }
+  }
+
+  &__show {
+    margin-top: 0px;
+    margin-left: 23px;
+    color: @color-blue;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: @color-blue--hover;
+      text-decoration: underline;
+    }
+    &:active {
+      color: @color-red;
+    }
+  }
+}
+
+
+input.brand-filter__checkbox:checked + label.brand-filter__label:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 5px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  background-color: @color-blue;
+}
