@@ -1,5 +1,7 @@
 .discount {
   display: inline-block;
+  position: absolute;
+  z-index: 1;
   padding: 4px;
   margin-left: 5px;
   font-weight: bold;
@@ -7,9 +9,12 @@
   background-color: @color-red;
 
   &--product {
-    position: absolute;
-    z-index: 1;
     right: 0;
     top: 0;
+  }
+
+  &--details {
+    right: 20px;
+    top: 20px;
   }
 }

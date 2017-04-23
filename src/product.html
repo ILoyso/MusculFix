@@ -386,17 +386,30 @@
   </div>
 </div>
 
+<!-- Breadcrumb -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-15">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Главная</a></li>
+        <li class="active">Каталог товаров</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
 <!-- Main  -->
 <div class="container main-content">
   <div class="row">
     <div class="hidden-xs col-sm-3">
+      <a class="button main-content__return" href="#">Вернуться к фильтру</a>
       <h3>Категории товаров</h3>
       <nav class="product-nav">
-        <ul class="product-nav__wrap">
+        <ul class="product-nav__wrap product-nav__wrap--short">
           <li class="product-nav__item"><a href="#" class="product-nav__link product-nav__link--action">Акции!</a></li>
           <li class="product-nav__item"><a href="#" class="product-nav__link">BCAA</a></li>
           <li class="product-nav__item"><a href="#" class="product-nav__link">L-глютамин</a></li>
-          <li class="product-nav__item"><a href="#" class="product-nav__link product-nav__link--separator">Аминокислоты</a></li>
+          <li class="product-nav__item"><a href="#" class="product-nav__link">Аминокислоты</a></li>
           <li class="product-nav__item"><a href="#" class="product-nav__link">Гейнеры</a></li>
           <li class="product-nav__item"><a href="#" class="product-nav__link">Креатин</a></li>
           <li class="product-nav__item"><a href="#" class="product-nav__link">Протеины</a></li>
@@ -412,6 +425,7 @@
           <li class="product-nav__item"><a href="#" class="product-nav__link">Повышение тестостерона</a></li>
           <li class="product-nav__item"><a href="#" class="product-nav__link">Специальные препараты</a></li>
         </ul>
+        <p class="product-nav__show">Показать весь список</p>
       </nav>
       <h3>Бренды</h3>
       <nav class="brand-nav">
@@ -484,21 +498,23 @@
         </ul>
         <p class="brand-nav__show">Показать весь список</p>
       </nav>
-      <div class="action">
-        <div class="action__top">
-          <span class="action__old-price">1 550 руб.</span>
-          <span class="discount">-25%</span>
-          <div class="action__price">1 340 руб.</div>
-          <div class="action__img">
-            <a class="action__img-link" href="#"><img src="img/test-item.png" alt=""></a>
+      <div class="main-content__action">
+        <div class="action">
+          <div class="action__top">
+            <span class="action__old-price">1 550 руб.</span>
+            <span class="discount">-25%</span>
+            <div class="action__price">1 340 руб.</div>
+            <div class="action__img">
+              <a class="action__img-link" href="#"><img src="img/test-item.png" alt=""></a>
+            </div>
           </div>
-        </div>
-        <div class="action__bottom">
-          <a href="#" class="action__title">Whey Protein пример длинного заголовка</a>
-          <a href="#" class="button js-add-to-basket">Купить со скидкой</a>
-          <div class="action__timer">
-            <p class="action__timer-text">До конца акции осталось</p>
-            <div class="timer"></div>
+          <div class="action__bottom">
+            <a href="#" class="action__title">Whey Protein пример длинного заголовка</a>
+            <a href="#" class="button js-add-to-basket">Купить со скидкой</a>
+            <div class="action__timer">
+              <p class="action__timer-text">До конца акции осталось</p>
+              <div class="timer"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -518,20 +534,22 @@
       </div>
     </div>
 
-
-
-
     <div class="col-xs-15 col-sm-12">
       <div class="product-detail">
-        <h2>Amino magic</h2>
+        <h2 class="product-detail__title">Amino magic</h2>
+        <p class="product-detail__name-wrap">
+          <a href="#" class="product-detail__brand">Scitec Nutrion</a>
+          <a href="#" class="product-detail__type">BCAA</a>
+        </p>
 
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-xs-4 col-md-5">
             <div class="product-detail__img">
-              <img src="img/test-item.png">
+              <span class="discount discount--details">-25%</span>
+              <img src="img/test-item-big.png">
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-xs-11 col-md-6">
             <div class="product-detail__info">
               <p><strong>Тип:</strong> <a href="#">говяжий протеин</a></p>
               <p><strong>Вес:</strong> 500 г.</p>
@@ -556,46 +574,143 @@
                 <span class="product-detail__price-new">1 340.00 руб</span>
                 </p>
               </div>
+              <div class="product-detail__count">
+                <div class="count">
+                  <input class="count__arrow count__arrow--minus" type="button">
+                  <input class="count__value" type="text" value="1">
+                  <input class="count__arrow count__arrow--plus" type="button">
+                </div>
+                <p class="product-detail__total-price">Итого: 2 680.00 руб.</p>
+              </div>
+              <p class="product-detail__stock">В наличии: 250 шт.</p>
+              <div class="product-detail__buttons">
+                <a class="button button--menu js-add-to-basket" href="#">Добавить в корзину</a>
+                <p class="product-detail__one-click" href="#" data-toggle="modal" data-target="#modalClick">Купить в 1 клик</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-15 col-md-4">
+            <div class="product-detail__stars">
+              <div class="stars stars--right">
+                <div class="stars__item stars__item--gold"></div>
+                <div class="stars__item stars__item--gold"></div>
+                <div class="stars__item stars__item--gold"></div>
+                <div class="stars__item stars__item--gold-half"></div>
+                <div class="stars__item"></div>
+              </div>
+              <p class="product-detail__compare">Добавить к сравнению</p>
+            </div>
+            <div class="product-detail__certificate"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content__tabs">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs nav-tabs--full" role="tablist">
+          <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Описание</a></li>
+          <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Отзывы (10)</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="home">
+            <div class="product-info">
+              <p class="product-info__desc">Мышечный рост, избавление от жира и небывалый энергетический подъем одновременно - это не сказка, а реальность с Amino Magic. Однако никакого волшебства в действии этого комплекса от Scitec Nutrition нет: в Amino Magic просто-напросто соединены лучшие усиливающие метаболизм, анаболизм и работоспособность аминокислоты.  Amino Magic от Scitec Nutrition содержит 9 важнейших для спортсмена аминокислот в свободной форме: аминокислоты с разветвленной боковой цепью BCAA, а также аргинин, глютамин, орнитин, таурин, лизин и карнитин. Такое сочетание обеспечивает стремительный мышечный рост и легкое восстановление, сгорание жировой прослойки. <a href="#">Читать далее...</a></p>
+
+              <div class="product-info__collapse">
+                <p class="product-info__open" data-toggle="collapse" data-target="#collapse1">Как применять</p>
+                <div id="collapse1" class="collapse">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque, dolore earum. Iure nemo laudantium voluptates ex illo quae impedit. Eos debitis corporis veritatis, odio similique veniam beatae repellat odit! Asperiores odio quidem ullam facere cumque eaque, doloribus quod! Amet, cupiditate unde. Velit nemo ratione, molestiae similique iure veritatis, esse ipsam magni perspiciatis, voluptatum sunt odio quos nulla. Natus, beatae.</p>
+                </div>
+              </div>
+
+              <div class="product-info__collapse">
+                <p class="product-info__open" data-toggle="collapse" data-target="#collapse2">Состав</p>
+                <div id="collapse2" class="collapse">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque, dolore earum. Iure nemo laudantium voluptates ex illo quae impedit. Eos debitis corporis veritatis, odio similique veniam beatae repellat odit! Asperiores odio quidem ullam facere cumque eaque, doloribus quod! Amet, cupiditate unde. Velit nemo ratione, molestiae similique iure veritatis, esse ipsam magni perspiciatis, voluptatum sunt odio quos nulla. Natus, beatae.</p>
+                </div>
+              </div>
 
             </div>
           </div>
-          <div class="col-md-4">
-
+          <div role="tabpanel" class="tab-pane" id="profile">
+            <article class="comment">
+              <div class="comment__header">
+                <div class="comment__left">
+                  <p class="comment__name">Имя Автора</p>
+                  <p class="comment__date">12.09.2016 17:46</p>
+                </div>
+                <div class="comment__right">
+                  <div class="comment__stars">
+                    <div class="stars stars--right">
+                      <div class="stars__item stars__item--gold"></div>
+                      <div class="stars__item stars__item--gold"></div>
+                      <div class="stars__item stars__item--gold"></div>
+                      <div class="stars__item stars__item--gold-half"></div>
+                      <div class="stars__item"></div>
+                    </div>
+                  </div>
+                  <p class="comment__value">4,5 / 5</p>
+                </div>
+              </div>
+              <div class="comment__text">
+                <p>Здесь будеь текст отзыва. Это не сказка, а реальность с Amino Magic. Однако никакого волшебства в действии этого комплекса от Scitec Nutrition нет: в Amino Magic просто-напросто соединены лучшие усиливающие метаболизм, анаболизм и работоспособность аминокислот...</p>
+              </div>
+            </article>
+            <article class="comment">
+              <div class="comment__header">
+                <div class="comment__left">
+                  <p class="comment__name">Имя Автора</p>
+                  <p class="comment__date">12.09.2016 17:46</p>
+                </div>
+                <div class="comment__right">
+                  <div class="comment__stars">
+                    <div class="stars stars--right">
+                      <div class="stars__item stars__item--gold"></div>
+                      <div class="stars__item stars__item--gold"></div>
+                      <div class="stars__item stars__item--gold"></div>
+                      <div class="stars__item stars__item--gold-half"></div>
+                      <div class="stars__item"></div>
+                    </div>
+                  </div>
+                  <p class="comment__value">4,5 / 5</p>
+                </div>
+              </div>
+              <div class="comment__text">
+                <p>Здесь будеь текст отзыва. Это не сказка, а реальность с Amino Magic. Однако никакого волшебства в действии этого комплекса от Scitec Nutrition нет: в Amino Magic просто-напросто соединены лучшие усиливающие метаболизм, анаболизм и работоспособность аминокислот...</p>
+              </div>
+            </article>
+            <article class="comment">
+              <div class="comment__header">
+                <div class="comment__left">
+                  <p class="comment__name">Имя Автора</p>
+                  <p class="comment__date">12.09.2016 17:46</p>
+                </div>
+                <div class="comment__right">
+                  <div class="comment__stars">
+                    <div class="stars stars--right">
+                      <div class="stars__item stars__item--gold"></div>
+                      <div class="stars__item stars__item--gold"></div>
+                      <div class="stars__item stars__item--gold"></div>
+                      <div class="stars__item stars__item--gold-half"></div>
+                      <div class="stars__item"></div>
+                    </div>
+                  </div>
+                  <p class="comment__value">4,5 / 5</p>
+                </div>
+              </div>
+              <div class="comment__text">
+                <p>Здесь будеь текст отзыва. Это не сказка, а реальность с Amino Magic. Однако никакого волшебства в действии этого комплекса от Scitec Nutrition нет: в Amino Magic просто-напросто соединены лучшие усиливающие метаболизм, анаболизм и работоспособность аминокислот...</p>
+              </div>
+            </article>
           </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
       </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!-- <h2>Лучшее предложение</h2> -->
+      <h3 class="main-content__subtitle">Персональные рекомендации</h3>
       <!-- new row -->
-<!--       <div class="wrapper">
+      <div class="wrapper">
         <div class="wrapper__column">
           <article class="product">
             <span class="discount discount--product">-25%</span>
@@ -728,14 +843,16 @@
             </div>
           </article>
         </div>
-      </div> -->
+      </div>
       <!-- new row -->
-<!--       <div class="wrapper">
+
+      <h3 class="main-content__subtitle">Вы недавно смотрели</h3>
+      <div class="wrapper">
         <div class="wrapper__column">
           <article class="product">
             <span class="discount discount--product">-25%</span>
             <div class="product__img">
-              <a href="#"><img src="img/test-item.png" alt=""></a>
+              <a href="#"><img src="img/no-photo.png" alt=""></a>
             </div>
             <a href="#" class="product__name">Whey Protein</a>
             <a href="#" class="product__brand">Scitec Nutrion</a>
@@ -786,7 +903,40 @@
                 <div class="stars__item stars__item--gold"></div>
                 <div class="stars__item stars__item--gold"></div>
                 <div class="stars__item stars__item--gold"></div>
+                <div class="stars__item"></div>
+                <div class="stars__item"></div>
+              </div>
+            </div>
+            <div class="product__buttons">
+              <p class="product__compare">Добавить к сравнению</p>
+              <p class="product__one-click" data-toggle="modal" data-target="#modalClick">Купить в 1 клик</p>
+              <a href="#" class="button button--product js-add-to-basket">В корзину</a>
+            </div>
+          </article>
+        </div>
+        <div class="wrapper__column">
+          <article class="product">
+            <span class="discount discount--product">-25%</span>
+            <div class="product__img">
+              <a href="#"><img src="img/test-item.png" alt=""></a>
+            </div>
+            <a href="#" class="product__name">Whey Protein Whey Protein Whey Protein</a>
+            <a href="#" class="product__brand">Scitec Nutrion</a>
+            <a href="#" class="product__type">гейнеры</a>
+            <div class="product__price">
+              <p class="product__price-old">
+              1 550.00 руб
+              </p>
+              <p class="product__price-new">
+                1 340.00 руб
+              </p>
+            </div>
+            <div class="product__stars">
+              <div class="stars">
+                <div class="stars__item stars__item--gold"></div>
+                <div class="stars__item stars__item--gold"></div>
                 <div class="stars__item stars__item--gold-half"></div>
+                <div class="stars__item"></div>
                 <div class="stars__item"></div>
               </div>
             </div>
@@ -819,8 +969,8 @@
                 <div class="stars__item stars__item--gold"></div>
                 <div class="stars__item stars__item--gold"></div>
                 <div class="stars__item stars__item--gold"></div>
-                <div class="stars__item stars__item--gold-half"></div>
-                <div class="stars__item"></div>
+                <div class="stars__item stars__item--gold"></div>
+                <div class="stars__item stars__item--gold"></div>
               </div>
             </div>
             <div class="product__buttons">
@@ -830,40 +980,7 @@
             </div>
           </article>
         </div>
-        <div class="wrapper__column">
-          <article class="product">
-            <span class="discount discount--product">-25%</span>
-            <div class="product__img">
-              <a href="#"><img src="img/test-item.png" alt=""></a>
-            </div>
-            <a href="#" class="product__name">Whey Protein Whey Protein Whey Protein</a>
-            <a href="#" class="product__brand">Scitec Nutrion</a>
-            <a href="#" class="product__type">гейнеры</a>
-            <div class="product__price">
-              <p class="product__price-old">
-              1 550.00 руб
-              </p>
-              <p class="product__price-new">
-                1 340.00 руб
-              </p>
-            </div>
-            <div class="product__stars">
-              <div class="stars">
-                <div class="stars__item stars__item--gold"></div>
-                <div class="stars__item stars__item--gold"></div>
-                <div class="stars__item stars__item--gold"></div>
-                <div class="stars__item stars__item--gold-half"></div>
-                <div class="stars__item"></div>
-              </div>
-            </div>
-            <div class="product__buttons">
-              <p class="product__compare">Добавить к сравнению</p>
-              <p class="product__one-click" data-toggle="modal" data-target="#modalClick">Купить в 1 клик</p>
-              <a href="#" class="button button--product js-add-to-basket">В корзину</a>
-            </div>
-          </article>
-        </div>
-      </div> -->
+      </div>
       <!-- new row -->
     </div>
   </div>

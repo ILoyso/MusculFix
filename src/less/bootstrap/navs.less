@@ -85,7 +85,6 @@
 
     // Actual tabs (as links)
     > a {
-      // margin-right: 2px;
       text-align: center;
       line-height: @line-height-base;
       color: #000000;
@@ -96,6 +95,7 @@
       border-radius: @border-radius-base @border-radius-base 0 0;
       &:hover {
         border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
+        background-color: transparent;
       }
 
       &.mob-tabs__action {
@@ -120,6 +120,77 @@
         // border: 1px solid @nav-tabs-active-link-hover-border-color;
         // border-bottom-color: transparent;
         border: 1px solid transparent;
+        cursor: default;
+      }
+    }
+  }
+  // pulling this in mainly for less shorthand
+  &.nav-justified {
+    .nav-justified();
+    .nav-tabs-justified();
+  }
+}
+
+.nav-tabs--full {
+  padding-bottom: 20px;
+  border-bottom: 1px solid @nav-tabs-border-color;
+  > li {
+    float: left;
+    position: relative;
+    width: auto;
+    // Make the list-items overlay the bottom border
+    margin-bottom: -1px;
+
+    &:not(:last-child):after {
+      content: '';
+      position: absolute;
+      right: 20px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      display: inline-block;
+      height: 13px;
+      width: 2px;
+      background-color: #d0d1e4;
+    }
+
+    // Actual tabs (as links)
+    > a {
+       padding: 0;
+       margin-right: 40px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: @line-height-base;
+      color: #d0d1e4;
+      text-transform: uppercase;
+      border-right: none;
+      border-top: 0 none;
+      border-bottom: 0 none;
+      background-color: transparent;
+      border-radius: 0;
+      &:hover {
+        border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
+      }
+
+      &.mob-tabs__action {
+        color: @color-red;
+
+        &:hover,
+        &:focus {
+          color: @color-red--hover;
+        }
+      }
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: #000000;
+        background-color: transparent;
+        border: 0 none;
         cursor: default;
       }
     }

@@ -1,0 +1,205 @@
+.product-detail {
+
+  margin-bottom: 55px;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__type {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: @gray-dark;
+
+    &:hover, &:focus {
+      color: @gray-dark;
+    }
+
+    &:active {
+      color: @color-blue;
+      text-decoration: none;
+    }
+  }
+
+  &__name-wrap {
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+
+    img {
+      max-width: 210px;
+      max-height: 280px;
+    }
+  }
+
+  &__info {
+    .clearfix();
+    font-size: @text-size--large;
+  }
+
+  &__taste {
+    .clearfix();
+    margin: 25px 0;
+    max-width: 220px;
+  }
+
+  &__price {
+    .clearfix();
+    font-size: @text-size--largest;
+  }
+
+  &__price-old {
+    color: @gray;
+    text-decoration: line-through;
+  }
+
+  &__price-new {
+    margin-left: 5px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  &__count {
+    .clearfix();
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  &__total-price {
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 14px;
+    font-size: @text-size--largest;
+    font-weight: bold;
+  }
+
+  &__stock {
+    color: @gray;
+    font-style: italic;
+  }
+
+  &__buttons {
+    margin-top: 30px;
+  }
+
+  &__stars {
+    .clearfix();
+
+    .stars {
+      float: right;
+    }
+  }
+
+  &__one-click {
+    margin-left: 15px;
+  }
+
+  &__compare {
+    float: right;
+    margin-top: 10px;
+  }
+
+  &__compare, &__one-click {
+    display: inline-block;
+    color: @color-blue;
+    cursor: pointer;
+
+    &:hover {
+      color: @color-blue--hover;
+      text-decoration: underline;
+    }
+    &:active {
+      color: @color-red;
+    }
+  }
+
+  &__certificate {
+    float: right;
+    margin-top: 50px;
+    min-width: 180px;
+    min-height: 137px;
+    background-image: url(../img/certificate.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .product-detail {
+
+    &__img {
+      max-width: 100%;
+      padding: 0;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &__info {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    &__taste {
+      margin: 15px 0;
+      max-width: 200px;
+    }
+
+    &__certificate {
+      display: none;
+    }
+
+    &__price {
+      font-size: @text-size;
+    }
+
+    &__price-new {
+      font-size: @text-size;
+    }
+
+    &__count {
+      margin-top: 10px;
+      margin-bottom: 0;
+
+      .count {
+        display: inline-block;
+        margin: 0 auto;
+      }
+    }
+
+    &__total-price {
+      margin-left: 0px;
+    }
+
+    &__one-click {
+      margin-left: 0px;
+      margin-top: 15px;
+    }
+
+    &__stock {
+      font-size: @text-size--small;
+    }
+
+    &__buttons {
+      margin-top: 20px;
+    }
+
+    &__stars {
+
+      .stars {
+        float: none;
+        text-align: center;
+      }
+    }
+
+    &__compare {
+      float: none;
+      margin-top: 10px;
+    }
+  }
+}

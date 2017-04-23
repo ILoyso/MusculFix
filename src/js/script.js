@@ -95,11 +95,18 @@ $(document).ready(function(){
 
 
   //Modal for compare
-  $('.product__compare').click(function(){
+  var productCompare = function () {
     $('.modal-compare').addClass('active');
     setTimeout(function(){
       $('.modal-compare').removeClass('active')
     },2000);
+  };
+
+  $('.product__compare').click(function(){
+    productCompare();
+  });
+  $('.product-detail__compare').click(function(){
+    productCompare();
   });
 
 
@@ -295,11 +302,19 @@ $(document).ready(function(){
     }
   });
 
-  // $('.brand-nav__show').click(function(e) {
-  //   // e.preventDefault();
-  //   $('.brand-nav__wrap').slideToggle(300);
-  // });
-
+  // Show all category
+  $('.product-nav__show').click(function() {
+    if ($('.product-nav__wrap').hasClass('product-nav__wrap--short')) {
+      $('.product-nav__wrap').removeClass('product-nav__wrap--short');
+      $('.product-nav__show').html('Показать весь список');
+    } else {
+      $('.product-nav__wrap').addClass('product-nav__wrap--short');
+      $('html, body').animate({
+        scrollTop: ($('.product-nav__wrap').offset().top - 100)
+      }, 500);
+      $('.product-nav__show').html('Скрыть список');
+    }
+  });
 
   // Burger menu
   function closeBurgerMenu() {
