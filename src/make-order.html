@@ -493,9 +493,15 @@
           <section class="form-steps__step active">
             <h3 class="form-steps__title">Шаг 1. Контактная информация</h3>
             <div class="form-contact">
-              <input class="form-contact__input" type="text" placeholder="Ваше имя *" required>
-              <input class="form-contact__input" type="email" placeholder="Ваш email *" required>
-              <input class="form-contact__input" type="tel" placeholder="Ваш телефон *" required>
+              <div class="input-wrap">
+                <input class="form-contact__input" type="text" placeholder="Ваше имя" required>
+              </div>
+              <div class="input-wrap">
+                <input class="form-contact__input" type="email" placeholder="Ваш email" required>
+              </div>
+              <div class="input-wrap">
+                <input class="form-contact__input" type="tel" placeholder="Ваш телефон" required>
+              </div>
               <textarea class="form-contact__textarea" name="" id="" cols="30" rows="6" placeholder="Комментарий"></textarea>
             </div>
             <span class="form-steps__next">Следующий шаг</span>
@@ -534,7 +540,9 @@
                   Оплата: <strong>только наличными</strong> <br>
                   Период доставки: <strong>с 11 часов ежедневно</strong>
                 </p>
-                <input class="form-delivery__input" type="tel" placeholder="Укажите адрес доставки *" required>
+                <div class="input-wrap">
+                  <input class="form-delivery__input" type="tel" placeholder="Укажите адрес доставки" required>
+                </div>
               </label>
             </div>
             <span class="form-steps__prev">Предыдущий шаг</span>

@@ -37,16 +37,27 @@
   }
 
   &__input {
-    display: none;
     width: 100%;
     margin-bottom: 10px;
     padding: 5px 14px;
     font-style: italic;
     font-weight: normal;
   }
+
+  .input-wrap {
+    display: none;
+  }
+
+  .dropdown {
+    display: none;
+  }
 }
 
-input.form-delivery__radio:checked + label > input{
+input.form-delivery__radio:checked + label > .input-wrap {
+  display: block;
+}
+
+input.form-delivery__radio:checked + label > .dropdown {
   display: block;
 }
 
