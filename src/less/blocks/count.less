@@ -1,0 +1,69 @@
+.count {
+
+  &__value {
+    float: left;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+
+    &:focus {
+      outline: #4d90fe auto 5px;
+    }
+  }
+
+  &__arrow {
+    position: relative;
+    float: left;
+    width: 40px;
+    height: 40px;
+    border: 0 none;
+    background-color: @color-blue;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover,
+    &:focus {
+      background-color: @color-blue--hover;
+    }
+
+    &--minus {
+      background-image: url(../img/arrow_bottom.png);
+    }
+    &--plus {
+      background-image: url(../img/arrow_top.png);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .count{
+
+    &__value {
+      width: 50px;
+      height: 30px;
+    }
+
+    &__arrow {
+      position: relative;
+      float: left;
+      width: 30px;
+      height: 30px;
+      border: 0 none;
+      background-color: @color-blue;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &:hover,
+      &:focus {
+        background-color: @color-blue--hover;
+      }
+
+      &--minus {
+        background-image: url(../img/arrow_bottom.png);
+      }
+      &--plus {
+        background-image: url(../img/arrow_top.png);
+      }
+    }
+  }
+}

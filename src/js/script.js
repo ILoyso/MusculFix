@@ -417,22 +417,23 @@ $(document).ready(function(){
 
 
   // Form-table
-  var numCount = document.querySelector('.form-table__count');
-  var plusBtn = document.querySelector('.form-table__arrow--plus');
-  var minusBtn = document.querySelector('.form-table__arrow--minus');
-  plusBtn.onclick = function() {
-    var qty = parseInt(numCount.value);
+  $('.count__arrow--plus').click(function() {
+    var numCount = $(this).prev();
+    var qty = parseInt($(numCount).val());
     qty = qty + 1;
-    numCount.value = qty;
-  }
-  minusBtn.onclick = function() {
-    var qty = parseInt(numCount.value);
+    $(numCount).val(qty);
+  });
+
+  $('.count__arrow--minus').click(function() {
+    var numCount = $(this).next();
+    var qty = parseInt($(numCount).val());
     if (qty <= 1) {
       return;
     }
     qty = qty - 1;
-    numCount.value = qty;
-  }
+    $(numCount).val(qty);
+  });
+
 
   function getChar(event) {
     if (event.which == null) { // IE
@@ -446,7 +447,7 @@ $(document).ready(function(){
     return null; // спец. символ
   }
 
-  numCount.onkeypress = function(e) {
+  $('.count__value').keypress(function(e) {
     e = e || event;
     if (e.ctrlKey || e.altKey || e.metaKey) return;
     var chr = getChar(e);
@@ -454,7 +455,10 @@ $(document).ready(function(){
     if (chr < '0' || chr > '9') {
       return false;
     }
-  }
+  });
+
+
+
 
   // Main form submit
 
