@@ -386,6 +386,109 @@
   </div>
 </div>
 
+<div class="visible-xs-block">
+  <ul id="myTab" class="nav nav-tabs nav-tabs--filter">
+    <li><a href="#panel3">Фильтр</a></li>
+    <li><a href="#panel4">Настройки</a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="panel3" class="tab-pane fade">
+      <form action="" class="filter-wrap">
+        <nav class="brand-filter" action="">
+          <input class="brand-filter__checkbox" type="checkbox" id="checkbox1">
+          <label class="brand-filter__label" for="checkbox1">ALEX FEDOROV NUTRITION</label>
+          <input class="brand-filter__checkbox" type="checkbox" id="checkbox2">
+          <label class="brand-filter__label" for="checkbox2">ANNA NOVA NUTRITION</label>
+          <input class="brand-filter__checkbox" type="checkbox" id="checkbox3">
+          <label class="brand-filter__label" for="checkbox3">APS NUTRITION</label>
+          <input class="brand-filter__checkbox" type="checkbox" id="checkbox4">
+          <label class="brand-filter__label" for="checkbox4">ARNOLD SCHWARZENEGGER SERIES</label>
+          <input class="brand-filter__checkbox" type="checkbox" id="checkbox5">
+          <label class="brand-filter__label" for="checkbox5">BIOTECH NUTRITION</label>
+          <input class="brand-filter__checkbox" type="checkbox" id="checkbox6">
+          <label class="brand-filter__label" for="checkbox6">BLENDER BOTTLE</label>
+          <input class="brand-filter__checkbox" type="checkbox" id="checkbox7">
+          <label class="brand-filter__label" for="checkbox7">BPI SPORTS</label>
+          <input class="brand-filter__checkbox" type="checkbox" id="checkbox8">
+          <label class="brand-filter__label" for="checkbox8">BSN</label>
+          <input class="brand-filter__checkbox" type="checkbox" id="checkbox9">
+          <label class="brand-filter__label" for="checkbox9">CELLUCOR</label>
+          <input class="brand-filter__checkbox" type="checkbox" id="checkbox10">
+          <label class="brand-filter__label" for="checkbox10">CLOMA PHARMA</label>
+        </nav>
+          <p class="brand-filter__show">Показать весь список</p>
+
+        <div class="sorting">
+          <p class="sorting__title">цена, руб.</p>
+          <input class="sorting__input" type="text" placeholder="от">
+          <span>-</span>
+          <input class="sorting__input" type="text" placeholder="до">
+          <p class="sorting__title">вес, г.</p>
+          <input class="sorting__input" type="text" placeholder="от">
+          <span>-</span>
+          <input class="sorting__input" type="text" placeholder="до">
+          <p class="sorting__title">порции, шт.</p>
+          <input class="sorting__input" type="text" placeholder="от">
+          <span>-</span>
+          <input class="sorting__input" type="text" placeholder="до">
+          <p class="sorting__title">рейтинг</p>
+          <input class="sorting__input" type="text" placeholder="от">
+          <span>-</span>
+          <input class="sorting__input" type="text" placeholder="до">
+        </div>
+
+        <div class="rating">
+          <p class="rating__title">Рейтинг</p>
+          <span>от</span>
+          <div class="stars stars--click" id="stars">
+            <div class="stars__item" alt="1"></div>
+            <div class="stars__item" alt="2"></div>
+            <div class="stars__item" alt="3"></div>
+            <div class="stars__item" alt="4"></div>
+            <div class="stars__item" alt="5"></div>
+          </div>
+        </div>
+
+        <div class="filter-wrap__buttons">
+          <button class="button button--filter">Подобрать</button>
+           <input class="button button--reset" type="reset" value="Сбросить">
+        </div>
+      </form>
+
+    </div>
+    <div id="panel4" class="tab-pane fade">
+      <div class="filter">
+        <div class="filter__count">
+          <p class="filter__count-title">Товаров на странице:</p>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              20
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">40</a></li>
+              <li><a href="#">60</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="filter__sort">
+          <p class="filter__sort-title">Сортировать:</p>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              По возрастанию цены
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">По убыванию цены</a></li>
+              <li><a href="#">По рейтингу</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- Main  -->
 <div class="container main-content">
@@ -417,7 +520,7 @@
       </nav>
 
       <h3>Бренды</h3>
-      <form action="">
+      <form action="" class="filter-wrap">
         <nav class="brand-filter" action="">
           <input class="brand-filter__checkbox" type="checkbox" id="checkbox1">
           <label class="brand-filter__label" for="checkbox1">ALEX FEDOROV NUTRITION</label>
@@ -444,20 +547,40 @@
 
         <div class="sorting">
           <p class="sorting__title">цена, руб.</p>
-          <input class="sorting__input" type="text" placeholder="от"> -
+          <input class="sorting__input" type="text" placeholder="от">
+          <span>-</span>
           <input class="sorting__input" type="text" placeholder="до">
           <p class="sorting__title">вес, г.</p>
-          <input class="sorting__input" type="text" placeholder="от"> -
+          <input class="sorting__input" type="text" placeholder="от">
+          <span>-</span>
           <input class="sorting__input" type="text" placeholder="до">
           <p class="sorting__title">порции, шт.</p>
-          <input class="sorting__input" type="text" placeholder="от"> -
+          <input class="sorting__input" type="text" placeholder="от">
+          <span>-</span>
           <input class="sorting__input" type="text" placeholder="до">
           <p class="sorting__title">рейтинг</p>
-          <input class="sorting__input" type="text" placeholder="от"> -
+          <input class="sorting__input" type="text" placeholder="от">
+          <span>-</span>
           <input class="sorting__input" type="text" placeholder="до">
         </div>
-      </form>
 
+        <div class="rating">
+          <p class="rating__title">Рейтинг</p>
+          <span>от</span>
+          <div class="stars stars--click" id="stars">
+            <div class="stars__item" alt="1"></div>
+            <div class="stars__item" alt="2"></div>
+            <div class="stars__item" alt="3"></div>
+            <div class="stars__item" alt="4"></div>
+            <div class="stars__item" alt="5"></div>
+          </div>
+        </div>
+
+        <div class="filter-wrap__buttons">
+          <button class="button button--filter">Подобрать</button>
+           <input class="button button--reset" type="reset" value="Сбросить">
+        </div>
+      </form>
 
       <div class="main-content__action">
         <div class="action">
@@ -495,20 +618,16 @@
       </div>
     </div>
 
-
-
-
-
     <div class="col-xs-15 col-sm-12">
-      <h2>Протеин</h2>
-      <div class="main-content__info">
+      <div class="main-content__info hidden-xs">
+        <h2>Протеин</h2>
         <p>
           Сео-текст о компании для размещения на главной странице. Пример контента. Сео-текст о компании для размещения на главной странице. Пример контента. Сео-текст о компании для размещения на главной странице. Пример контента. Сео-текст о компании для размещения на главной странице. Пример контента. Сео-текст о компании для размещения на главной странице. Пример контента. Сео-текст о компании для размещения на главной странице. Пример контента. Сео-текст о компании для размещения на главной странице. Пример контента. Сео-текст о компании для размещения на главной странице. Пример контента. Сео-текст о компании для размещения на главной странице. Пример контента. Сюда же можно засунуть ссылки для продвижения, или раскидать их по тексту.
         </p>
       </div>
       <div class="main-content__pagination">
         <div class="filter">
-          <div class="filter__count">
+          <div class="filter__count hidden-xs">
             <p class="filter__count-title">Товаров на странице:</p>
             <div class="dropdown">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -521,7 +640,7 @@
               </ul>
             </div>
           </div>
-          <div class="filter__sort">
+          <div class="filter__sort hidden-xs">
             <p class="filter__sort-title">Сортировать:</p>
             <div class="dropdown">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -547,7 +666,6 @@
                 <li><a href="#">3</a></li>
                 <li><a href="#">4</a></li>
                 <li class="active"><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
                 <li><a href="#">...</a></li>
                 <li><a href="#">41</a></li>
                 <li>
@@ -832,7 +950,7 @@
       </div>
       <!-- new row -->
 
-      <div class="main-content__pagination">
+      <div class="main-content__pagination hidden-xs">
         <div class="filter">
           <div class="filter__count">
             <p class="filter__count-title">Товаров на странице:</p>

@@ -81,6 +81,27 @@
         margin-top: 18px;
         padding: 12px 0;
     }
+
+    &--filter {
+        width: 140px;
+    }
+
+    &--reset {
+        background-color: transparent;
+        margin-left: 10px;
+        padding: 0;
+        color: @color-blue;
+
+        &:hover, &:focus {
+            color: @color-blue;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        &:active {
+            color: @color-red;
+            font-weight: normal;
+        }
+    }
 }
 
 @media (max-width: 767px) {

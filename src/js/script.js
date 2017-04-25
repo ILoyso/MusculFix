@@ -360,7 +360,6 @@ $(document).ready(function(){
   });
 
   // Subscribe Form
-
   $('#subscribeForm').submit(function(evt) {
     $('.subscribe__main').hide();
     $('.subscribe__thank').show();
@@ -383,9 +382,6 @@ $(document).ready(function(){
     until: new Date(2017, 12 - 9, 30),
     padZeroes: true
   });
-
-
-
 
   // For mob
   function mobResize() {
@@ -426,7 +422,6 @@ $(document).ready(function(){
     $('#myTab li').removeClass('active');
   });
 
-
   // Show all list in tab
   $('.mob-tabs__show').click(function() {
     if ($('.mob-tabs-nav').hasClass('mob-tabs-nav--full')) {
@@ -440,9 +435,6 @@ $(document).ready(function(){
       $('.mob-tabs__show').html('Скрыть список');
     }
   });
-
-
-
 
   // Form-table
   $('.count__arrow--plus').click(function() {
@@ -486,10 +478,7 @@ $(document).ready(function(){
   });
 
 
-
-
   // Main form submit
-
   $('#mainFormSubmit').click(function() {
     $('.form-main').hide();
     $('.thank-you').show();
@@ -497,15 +486,6 @@ $(document).ready(function(){
         scrollTop: (0)
     }, 100);
   })
-
-
-
-
-
-
-
-
-
 
   $('.form-steps__next').click(function() {
     var step = document.querySelector('.form-steps__step.active');
@@ -518,5 +498,25 @@ $(document).ready(function(){
     $(step).prev().addClass('active');
     $(step).removeClass('active');
   });
+
+  // Clickable stars
+  var clearStar = function(){
+    $('#stars .stars__item').each(function(){
+      $(this).removeClass('stars__item--gold');
+    })
+  }
+
+  var colorizeStar = function(item) {
+    var count = $(item).attr('alt');
+    for (var i = 1; i <= count; i++) {
+      $('.stars__item[alt='+i+']').addClass('stars__item--gold');
+    }
+  }
+
+  $('#stars .stars__item').click(function(){
+    clearStar();
+    colorizeStar($(this));
+  });
+
 
 });

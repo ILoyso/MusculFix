@@ -31,10 +31,6 @@
       border: 1px solid #d5d5da;
       background-color: @color-white;
     }
-
-    &:hover {
-      background-color: @gray--lighten;
-    }
   }
 
   &__show {
@@ -54,7 +50,6 @@
   }
 }
 
-
 input.brand-filter__checkbox:checked + label.brand-filter__label:after {
   content: '';
   position: absolute;
@@ -64,4 +59,33 @@ input.brand-filter__checkbox:checked + label.brand-filter__label:after {
   width: 6px;
   height: 6px;
   background-color: @color-blue;
+}
+
+@media (max-width: 767px) {
+  .brand-filter {
+
+    &__label {
+      display: block;
+      position: relative;
+      padding-left: 24px;
+      font-weight: normal;
+    }
+
+    &__show {
+      text-align: left;
+      margin-top: 0px;
+      margin-left: 23px;
+      color: @color-blue;
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:hover {
+        color: @color-blue--hover;
+        text-decoration: underline;
+      }
+      &:active {
+        color: @color-red;
+      }
+    }
+  }
 }
