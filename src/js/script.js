@@ -187,6 +187,10 @@ $(document).ready(function(){
     }
   });
 
+  $('.modal-basket__close').click( function () {
+    basketClose();
+  });
+
   var scrollBasket = function () {
     var scrollPos = $(this).scrollTop();
     if (( scrollPos >= scrollMenuPos ) & ($('.basket').hasClass('active'))) {
@@ -280,8 +284,8 @@ $(document).ready(function(){
 
       if ($(window).width() > 768) {
         $('.modal-search').offset({
-          top: position.top + btnHeight + 2,
-          left: position.left - modalWight + btnWidth
+          top: position.top + btnHeight,
+          left: position.left - modalWight + btnWidth -2
         });
       }
     }
@@ -359,6 +363,15 @@ $(document).ready(function(){
     }
   });
 
+  $(document).click( function(event) {
+    if (($(event.target).closest('.left-menu__wrap').length) || ($(event.target).closest('.burger').length)) {
+      return;
+    }
+    closeBurgerMenu();
+    event.stopPropagation();
+  });
+
+
   // Subscribe Form
   $('#subscribeForm').submit(function(evt) {
     $('.subscribe__main').hide();
@@ -379,7 +392,7 @@ $(document).ready(function(){
     autoplaySpeed: 10000,
   });
   $('.timer').countdown({
-    until: new Date(2017, 12 - 9, 30),
+    until: new Date(2017, 12 - 8, 30),
     padZeroes: true
   });
 

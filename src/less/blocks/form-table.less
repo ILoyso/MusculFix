@@ -18,7 +18,9 @@
     padding-bottom: 36px;
 
     &:nth-child(1) {
-      padding-left: 23px;
+      padding-left: 10px;
+      padding-right: 20px;
+      text-align: center;
     }
     &:nth-child(2) {
       padding-top: 55px;
@@ -49,7 +51,7 @@
       padding-left: 40px;
     }
     &:nth-child(2) {
-      width: 33.33333333%;
+      width: 31.33333333%;
     }
     &:nth-child(3) {
       width: 20%;
@@ -62,7 +64,8 @@
       padding-left: 23px;
     }
     &:nth-child(6) {
-      width: 6.66666667%;
+      width: 8.66666667%;
+      padding-left: 20px;
     }
   }
 
@@ -131,6 +134,21 @@
     float: right;
     cursor: pointer;
     color: #d0d1e4;
+
+    &:hover::after {
+      content: 'Удалить';
+      position: absolute;
+      z-index: 15;
+      top: -1px;
+      left: -70px;
+      padding: 5px 12px;
+      border-radius: 10px;
+      background-color: @color-blue;
+      font-size: 11px;
+      line-height: 11px;
+      color: @color-white;
+      text-align: center;
+    }
   }
 }
 
