@@ -306,16 +306,16 @@ $(document).ready(function(){
     }
   });
 
-  $('.brand-filter__show').click(function() {
-    if ($('.brand-filter').hasClass('brand-filter--full')) {
-      $('.brand-filter').removeClass('brand-filter--full');
+  $('.checkbox-filter__show').click(function() {
+    if ($('.checkbox-filter').hasClass('checkbox-filter--full')) {
+      $('.checkbox-filter').removeClass('checkbox-filter--full');
       $('html, body').animate({
-        scrollTop: ($('.brand-filter').offset().top - 100)
+        scrollTop: ($('.checkbox-filter').offset().top - 100)
       }, 500);
-      $('.brand-filter__show').html('Показать весь список');
+      $('.checkbox-filter__show').html('Показать весь список');
     } else {
-      $('.brand-filter').addClass('brand-filter--full');
-      $('.brand-filter__show').html('Скрыть список');
+      $('.checkbox-filter').addClass('checkbox-filter--full');
+      $('.checkbox-filter__show').html('Скрыть список');
     }
   });
 
