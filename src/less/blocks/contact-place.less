@@ -1,0 +1,72 @@
+.contact-place {
+  border: 1px solid #d5d5da;
+
+  &__top {
+    padding: 10px 10px 10px 6px;
+  }
+
+  &__link {
+
+    &--blue:before, &--purple:before, &--red:before, &--orange:before {
+      content: "";
+      position: relative;
+      bottom: -1px;
+      margin-right: 5px;
+      background-image: url(../img/spritesheet.png);
+      background-repeat: no-repeat;
+      display: inline-block;
+    }
+    &--blue:before {
+      width: 13px;
+      height: 13px;
+      background-position: -103px -5px;;
+    }
+    &--purple:before {
+      width: 13px;
+      height: 13px;
+      background-position: -5px -51px;
+    }
+    &--red:before {
+      width: 13px;
+      height: 13px;
+      background-position: -28px -51px;
+    }
+    &--orange:before {
+      width: 13px;
+      height: 13px;
+      background-position: -103px -28px;
+    }
+  }
+
+  &__bottom {
+    padding: 12px 10px 12px 6px;
+  }
+
+  &__map {
+    max-width: 100%;
+
+    img {
+      width: 100%;
+    }
+
+    &--mob {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__all {
+    margin-left: 10px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .contact-place {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+}

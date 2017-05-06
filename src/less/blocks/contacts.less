@@ -29,6 +29,7 @@
   &__time {
     margin-bottom: 5px;
     color: @gray;
+    white-space: nowrap;
 
     &--icon {
       position: relative;
@@ -73,6 +74,10 @@
         background-position: -5px -5px;
       }
     }
+
+    &--full {
+      min-height: 48px;
+    }
   }
 
   &__button {
@@ -91,6 +96,13 @@
 
     &__time {
       font-size: @text-size;
+    }
+
+    &__address {
+
+      &--full {
+        min-height: auto;
+      }
     }
   }
 }

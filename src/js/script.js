@@ -89,6 +89,15 @@ $(document).ready(function(){
     modalPlaceClose();
   });
 
+  $(document).click( function(event) {
+    if (($(event.target).closest('.modal-place__wrap').length) ||
+        ($(event.target).closest('.places__link').length)) {
+      return;
+    }
+    modalPlaceClose();
+    event.stopPropagation();
+  });
+
   $(window).scroll(function(){
     modalPlaceClose();
   });
@@ -291,6 +300,15 @@ $(document).ready(function(){
     }
   });
 
+  $(document).click( function(event) {
+    if (($(event.target).closest('.search__form').length) ||
+        ($(event.target).closest('.modal-search').length)) {
+      return;
+    }
+    closeSearch();
+    event.stopPropagation();
+  });
+
 
   // Show all brands
   $('.brand-nav__show').click(function() {
@@ -395,6 +413,7 @@ $(document).ready(function(){
     until: new Date(2017, 12 - 8, 30),
     padZeroes: true
   });
+
 
   // For mob
   function mobResize() {
