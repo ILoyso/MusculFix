@@ -85,10 +85,6 @@ $(document).ready(function(){
     modalPlaceClose();
   });
 
-  $('.modal-place').click(function(evt) {
-    modalPlaceClose();
-  });
-
   $(document).click( function(event) {
     if (($(event.target).closest('.modal-place__wrap').length) ||
         ($(event.target).closest('.places__link').length)) {
