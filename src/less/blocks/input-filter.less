@@ -12,12 +12,38 @@
   &__input {
     width: 90px;
     height: 30px;
-    padding: 0 10px;
+    padding: 0 10px 0 27px;
   }
 
   span {
     display: inline-block;
     margin-right: 10px;
     margin-left: 10px;
+  }
+
+  &__from {
+    position: relative;
+    display: inline-block;
+
+    &:before {
+      content: 'от';
+      position: absolute;
+      left: 10px;
+      top: 7px;
+      color: @gray;
+    }
+  }
+
+  &__till {
+    position: relative;
+    display: inline-block;
+
+    &:before {
+      content: 'до';
+      position: absolute;
+      left: 10px;
+      top: 7px;
+      color: @gray;
+    }
   }
 }
