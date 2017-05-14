@@ -307,44 +307,68 @@ $(document).ready(function(){
 
 
   // Show all brands
-  $('.brand-nav__show').click(function() {
+  var showBrandNav = function () {
     if ($('.brand-nav__wrap').hasClass('brand-nav__wrap--full')) {
       $('.brand-nav__wrap').removeClass('brand-nav__wrap--full');
       $('html, body').animate({
         scrollTop: ($('.brand-nav__wrap').offset().top - 100)
       }, 500);
       $('.brand-nav__show').html('Показать весь список');
+      $('.brand-nav__hide').hide();
     } else {
       $('.brand-nav__wrap').addClass('brand-nav__wrap--full');
-      $('.brand-nav__show').html('Скрыть список');
+      $('.brand-nav__show').html('Свернуть список');
+      $('.brand-nav__hide').show();
     }
+  }
+  $('.brand-nav__show').click(function() {
+    showBrandNav();
+  });
+  $('.brand-nav__hide').click(function() {
+    showBrandNav();
   });
 
-  $('.checkbox-filter__show').click(function() {
-    if ($('.checkbox-filter').hasClass('checkbox-filter--full')) {
-      $('.checkbox-filter').removeClass('checkbox-filter--full');
+  var showCheckboxFilter = function () {
+    if ($('.checkbox-filter__wrap').hasClass('checkbox-filter__wrap--full')) {
+      $('.checkbox-filter__wrap').removeClass('checkbox-filter__wrap--full');
       $('html, body').animate({
-        scrollTop: ($('.checkbox-filter').offset().top - 100)
+        scrollTop: ($('.checkbox-filter__wrap').offset().top - 100)
       }, 500);
       $('.checkbox-filter__show').html('Показать весь список');
+      $('.checkbox-filter__hide').hide();
     } else {
-      $('.checkbox-filter').addClass('checkbox-filter--full');
-      $('.checkbox-filter__show').html('Скрыть список');
+      $('.checkbox-filter__wrap').addClass('checkbox-filter__wrap--full');
+      $('.checkbox-filter__show').html('Свернуть список');
+      $('.checkbox-filter__hide').show();
     }
+  }
+  $('.checkbox-filter__show').click(function() {
+    showCheckboxFilter();
+  });
+  $('.checkbox-filter__hide').click(function() {
+    showCheckboxFilter();
   });
 
   // Show all category
-  $('.product-nav__show').click(function() {
+  var showProductNav = function () {
     if ($('.product-nav__wrap').hasClass('product-nav__wrap--short')) {
       $('.product-nav__wrap').removeClass('product-nav__wrap--short');
-      $('.product-nav__show').html('Показать весь список');
+      $('.product-nav__show').html('Свернуть список');
+      $('.product-nav__hide').show();
     } else {
       $('.product-nav__wrap').addClass('product-nav__wrap--short');
       $('html, body').animate({
         scrollTop: ($('.product-nav__wrap').offset().top - 100)
       }, 500);
-      $('.product-nav__show').html('Скрыть список');
+      $('.product-nav__show').html('Показать весь список');
+      $('.product-nav__hide').hide();
     }
+  }
+  $('.product-nav__show').click(function() {
+    showProductNav();
+  });
+  $('.product-nav__hide').click(function() {
+    showProductNav();
   });
 
   // Burger menu
@@ -460,7 +484,7 @@ $(document).ready(function(){
       $('.mob-tabs__show').html('Показать весь список');
     } else {
       $('.mob-tabs-nav').addClass('mob-tabs-nav--full');
-      $('.mob-tabs__show').html('Скрыть список');
+      $('.mob-tabs__show').html('Свернуть список');
     }
   });
 
@@ -546,5 +570,11 @@ $(document).ready(function(){
     colorizeStar($(this));
   });
 
+  // Checkbox filter sort
+  $('.checkbox-filter__label').click(function(){
+    var positionTop = $(this).position();
+    $('.checkbox-filter__sort').show();
+    $('.checkbox-filter__sort').css('top', positionTop.top - 3);
+  });
 
 });

@@ -5,7 +5,6 @@
 @import 'slick.less';
 @import 'jquery.countdown.less';
 
-@import 'blocks/about.less';
 @import 'blocks/action.less';
 @import 'blocks/additional.less';
 @import 'blocks/basket.less';
@@ -21,6 +20,8 @@
 @import 'blocks/comment.less';
 @import 'blocks/contact-place.less';
 @import 'blocks/contacts.less';
+@import 'blocks/content-description.less';
+@import 'blocks/content-heading.less';
 @import 'blocks/count.less';
 @import 'blocks/discount.less';
 @import 'blocks/input-filter.less';
@@ -76,4 +77,15 @@ body {
   &.mob-menu {
     overflow-y: hidden;
   }
+}
+
+input.error {
+  border: 1px solid @color-red;
+}
+
+.error-text {
+  text-align: left;
+  margin-top: 5px;
+  color: @color-red;
+  font-size: @text-size--small;
 }

@@ -447,8 +447,9 @@
           </ul>
         </div>
       </div>
-      <h3>Категории товаров</h3>
+
       <nav class="product-nav">
+        <h3>Категории товаров</h3>
         <ul class="product-nav__wrap">
           <li class="product-nav__item"><a href="#" class="product-nav__link product-nav__link--action">Акции!</a></li>
           <li class="product-nav__item"><a href="#" class="product-nav__link">BCAA</a></li>
@@ -470,8 +471,10 @@
           <li class="product-nav__item"><a href="#" class="product-nav__link">Специальные препараты</a></li>
         </ul>
       </nav>
-      <h3>Бренды</h3>
+
       <nav class="brand-nav">
+        <h3>Бренды</h3>
+        <span class="brand-nav__hide">Свернуть</span>
         <ul class="brand-nav__wrap">
           <li class="brand-nav__item brand-nav__item--a"><a href="#" class="brand-nav__link">ALEX FEDOROV NUTRITION</a></li>
           <li class="brand-nav__item"><a href="#" class="brand-nav__link">ANNA NOVA NUTRITION</a></li>
@@ -876,7 +879,7 @@
 </div>
 
 <!-- About -->
-<div class="about">
+<div class="content-description">
   <div class="container">
     <div class="row">
       <div class="col-xs-15">
@@ -1114,8 +1117,15 @@
           <div class="modal-form">
             <h2 class="modal-form__title">Купить в 1 клик</h2>
             <form action="">
-              <input class="modal-form__input" type="text" placeholder="Как Вас зовут?*" required>
-              <input class="modal-form__input" type="tel" placeholder="Ваш номер телефона?*" required>
+              <div class="input-wrap">
+                <input class="modal-form__input error" type="text" placeholder="Как Вас зовут?" required>
+                <div class="error-text">
+                  <span>Поле является обязательным</span>
+                </div>
+              </div>
+              <div class="input-wrap">
+                <input class="modal-form__input" type="tel" placeholder="Ваш номер телефона?" required>
+              </div>
               <input class="modal-form__input" type="email" placeholder="Ваш email">
               <textarea class="modal-form__textarea" placeholder="Текс сообщения" name="" id="" cols="30" rows="10"></textarea>
               <button class="button button--full button--modal">Купить</button>
