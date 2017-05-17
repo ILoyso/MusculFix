@@ -571,10 +571,20 @@ $(document).ready(function(){
   });
 
   // Checkbox filter sort
-  $('.checkbox-filter__label').click(function(){
-    var positionTop = $(this).position();
-    $('.checkbox-filter__sort').show();
-    $('.checkbox-filter__sort').css('top', positionTop.top - 3);
+  var showFilterSort = function(item) {
+    var positionTop = $(item).offset();
+    $('.filter-wrap__sort').show();
+    $('.filter-wrap__sort').offset({
+      top: positionTop.top - 3
+    });
+  };
+
+  $('.checkbox-filter__label, .stars__item').click(function(){
+    showFilterSort(this);
+  });
+
+  $('.input-filter__input').keyup(function(){
+    showFilterSort(this);
   });
 
 });
