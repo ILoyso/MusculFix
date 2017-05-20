@@ -183,12 +183,24 @@ $(document).ready(function(){
     $('.basket').removeClass('active');
   }
 
+  var scrollToBasketTop = function(basket) {
+    if ($(basket).hasClass('basket--top')) {
+      var scrollPos = $(this).scrollTop();
+      if (( scrollPos <= scrollMenuPos ) & ( scrollPos > 1 )) {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 500);
+      }
+    }
+  };
+
   $('.basket').click( function () {
     var basketClick = this;
     if ( $(basketClick).hasClass('active') ) {
       basketClose();
     } else {
       basketOpen(basketClick);
+      scrollToBasketTop(basketClick);
     }
   });
 
@@ -249,6 +261,7 @@ $(document).ready(function(){
         basketOpen($('.basket--scroll'));
       } else  {
         basketOpen($('.basket--top'));
+        scrollToBasketTop($('.basket--top'));
       }
     }
   });
@@ -543,12 +556,18 @@ $(document).ready(function(){
     var step = document.querySelector('.form-steps__step.active');
     $(step).next().addClass('active');
     $(step).removeClass('active');
+    $('html, body').animate({
+        scrollTop: ($('#formSteps').offset().top - 70)
+      }, 100);
   });
 
   $('.form-steps__prev').click(function() {
     var step = document.querySelector('.form-steps__step.active');
     $(step).prev().addClass('active');
     $(step).removeClass('active');
+    $('html, body').animate({
+        scrollTop: ($('#formSteps').offset().top - 70)
+      }, 100);
   });
 
   // Clickable stars
@@ -585,6 +604,14 @@ $(document).ready(function(){
 
   $('.input-filter__input').keyup(function(){
     showFilterSort(this);
+  });
+
+
+  //Modal search links
+  $('.modal-search__name, .modal-search__brand').click(function(e){
+    e.preventDefault();
+    var url = $(this).attr('data-url');
+    $(location).attr('href', url);
   });
 
 });
